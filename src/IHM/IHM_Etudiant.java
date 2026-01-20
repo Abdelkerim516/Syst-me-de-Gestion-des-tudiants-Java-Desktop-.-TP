@@ -83,7 +83,6 @@ ResultSet rs = null;
         ButtSupprimer = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         TableTitle = new javax.swing.JTable();
-        jLabel7 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         txtmat = new javax.swing.JTextField();
@@ -99,7 +98,7 @@ ResultSet rs = null;
         jLabel1 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         Datejour = new com.toedter.calendar.JDateChooser();
-        jSeparator1 = new javax.swing.JSeparator();
+        jLabel9 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -116,9 +115,10 @@ ResultSet rs = null;
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 248, 240));
         jPanel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
+        ButtNouvea.setBackground(new java.awt.Color(224, 224, 224));
         ButtNouvea.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         ButtNouvea.setText("Nouveau");
         ButtNouvea.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -128,7 +128,9 @@ ResultSet rs = null;
             }
         });
 
+        ButtSauve.setBackground(new java.awt.Color(46, 125, 50));
         ButtSauve.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        ButtSauve.setForeground(new java.awt.Color(255, 255, 255));
         ButtSauve.setText("Sauvegarder");
         ButtSauve.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         ButtSauve.addActionListener(new java.awt.event.ActionListener() {
@@ -137,7 +139,9 @@ ResultSet rs = null;
             }
         });
 
+        ButtModif.setBackground(new java.awt.Color(251, 140, 0));
         ButtModif.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        ButtModif.setForeground(new java.awt.Color(255, 255, 255));
         ButtModif.setText("Modifier");
         ButtModif.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         ButtModif.addActionListener(new java.awt.event.ActionListener() {
@@ -146,7 +150,9 @@ ResultSet rs = null;
             }
         });
 
+        ButtSupprimer.setBackground(new java.awt.Color(198, 40, 40));
         ButtSupprimer.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        ButtSupprimer.setForeground(new java.awt.Color(255, 255, 255));
         ButtSupprimer.setText("Supprimer");
         ButtSupprimer.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         ButtSupprimer.addActionListener(new java.awt.event.ActionListener() {
@@ -156,6 +162,7 @@ ResultSet rs = null;
         });
 
         TableTitle.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
+        TableTitle.setForeground(new java.awt.Color(230, 230, 230));
         TableTitle.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -174,11 +181,8 @@ ResultSet rs = null;
         });
         jScrollPane2.setViewportView(TableTitle);
 
-        jLabel7.setFont(new java.awt.Font("Bell MT", 0, 24)); // NOI18N
-        jLabel7.setText("Formulaire d'Inscription");
-
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2), "Gestion des Inscriptions", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 24), new java.awt.Color(0, 0, 204))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2), "Gestion des Inscriptions", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 24), new java.awt.Color(230, 81, 0))); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
         jLabel4.setText("Sexe :");
@@ -250,7 +254,7 @@ ResultSet rs = null;
                                     .addComponent(txtprenom, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(txtnom, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(txtmat, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -286,71 +290,63 @@ ResultSet rs = null;
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-        jSeparator1.setAlignmentX(1.0F);
-        jSeparator1.setAlignmentY(1.0F);
-        jSeparator1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Bannier-Projet-Java.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(ButtNouvea, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ButtSauve, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ButtModif, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ButtSupprimer, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(186, 186, 186)
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 403, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 269, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(253, 253, 253)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(ButtNouvea, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ButtSauve, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ButtModif, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ButtSupprimer, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jScrollPane2)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 926, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(460, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ButtSauve, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(ButtNouvea, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(ButtModif, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(ButtSupprimer, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(8, 8, 8))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -365,25 +361,24 @@ ResultSet rs = null;
         try {
             String sql = "INSERT INTO etudiant" + "(matricule, nom, prenom, sexe, niveau, domaine, date_inscription)" + "VALUES (?, ?, ?, ?, ?, ?, ?)";
             pst = conn.prepareStatement(sql);
-            
-            
+
             pst.setString(1, txtmat.getText());
             pst.setString(2, txtnom.getText());
             pst.setString(3, txtprenom.getText());
             pst.setString(4, Cmbsexe.getSelectedItem().toString());
             pst.setString(5, Cmbniveau.getSelectedItem().toString());
             pst.setString(6, Cmbdomain.getSelectedItem().toString());
-            
+
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        pst.setString(7, sdf.format(Datejour.getDate()));
+            pst.setString(7, sdf.format(Datejour.getDate()));
 
-        pst.executeUpdate();
+            pst.executeUpdate();
 
-        JOptionPane.showMessageDialog(null, "Étudiant enregistré avec succès");
-        afficherEtudiants();
-        viderChamps();
+            JOptionPane.showMessageDialog(null, "Étudiant enregistré avec succès");
+            afficherEtudiants();
+            viderChamps();
         } catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "Erreur : " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Erreur : " + e.getMessage());
 
         }
     }//GEN-LAST:event_ButtSauveActionPerformed
@@ -397,95 +392,95 @@ ResultSet rs = null;
         // TODO add your handling code here:
         int row = TableTitle.getSelectedRow();
 
-    if (row >= 0) {
-        txtmat.setText(TableTitle.getValueAt(row, 0).toString());
-        txtnom.setText(TableTitle.getValueAt(row, 1).toString());
-        txtprenom.setText(TableTitle.getValueAt(row, 2).toString());
-        Cmbsexe.setSelectedItem(TableTitle.getValueAt(row, 3).toString());
-        Cmbniveau.setSelectedItem(TableTitle.getValueAt(row, 4).toString());
-        Cmbdomain.setSelectedItem(TableTitle.getValueAt(row, 5).toString());
+        if (row >= 0) {
+            txtmat.setText(TableTitle.getValueAt(row, 0).toString());
+            txtnom.setText(TableTitle.getValueAt(row, 1).toString());
+            txtprenom.setText(TableTitle.getValueAt(row, 2).toString());
+            Cmbsexe.setSelectedItem(TableTitle.getValueAt(row, 3).toString());
+            Cmbniveau.setSelectedItem(TableTitle.getValueAt(row, 4).toString());
+            Cmbdomain.setSelectedItem(TableTitle.getValueAt(row, 5).toString());
 
-        try {
-            java.util.Date date = new SimpleDateFormat("yyyy-MM-dd")
-                    .parse(TableTitle.getValueAt(row, 6).toString());
-            Datejour.setDate(date);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Erreur date : " + e.getMessage());
+            try {
+                java.util.Date date = new SimpleDateFormat("yyyy-MM-dd")
+                .parse(TableTitle.getValueAt(row, 6).toString());
+                Datejour.setDate(date);
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Erreur date : " + e.getMessage());
+            }
         }
-    }
     }//GEN-LAST:event_TableTitleMouseClicked
 
     private void ButtModifActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtModifActionPerformed
         // TODO add your handling code here:
         if (txtmat.getText().isEmpty()) {
-        JOptionPane.showMessageDialog(null, "Sélectionnez un étudiant à modifier");
-        return;
-    }
+            JOptionPane.showMessageDialog(null, "Sélectionnez un étudiant à modifier");
+            return;
+        }
 
-    try {
-        String sql = "UPDATE etudiant SET "
-                   + "nom = ?, "
-                   + "prenom = ?, "
-                   + "sexe = ?, "
-                   + "niveau = ?, "
-                   + "domaine = ?, "
-                   + "date_inscription = ? "
-                   + "WHERE matricule = ?";
+        try {
+            String sql = "UPDATE etudiant SET "
+            + "nom = ?, "
+            + "prenom = ?, "
+            + "sexe = ?, "
+            + "niveau = ?, "
+            + "domaine = ?, "
+            + "date_inscription = ? "
+            + "WHERE matricule = ?";
 
-        pst = conn.prepareStatement(sql);
+            pst = conn.prepareStatement(sql);
 
-        pst.setString(1, txtnom.getText());
-        pst.setString(2, txtprenom.getText());
-        pst.setString(3, Cmbsexe.getSelectedItem().toString());
-        pst.setString(4, Cmbniveau.getSelectedItem().toString());
-        pst.setString(5, Cmbdomain.getSelectedItem().toString());
+            pst.setString(1, txtnom.getText());
+            pst.setString(2, txtprenom.getText());
+            pst.setString(3, Cmbsexe.getSelectedItem().toString());
+            pst.setString(4, Cmbniveau.getSelectedItem().toString());
+            pst.setString(5, Cmbdomain.getSelectedItem().toString());
 
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        pst.setString(6, sdf.format(Datejour.getDate()));
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            pst.setString(6, sdf.format(Datejour.getDate()));
 
-        pst.setString(7, txtmat.getText());
+            pst.setString(7, txtmat.getText());
 
-        pst.executeUpdate();
+            pst.executeUpdate();
 
-        JOptionPane.showMessageDialog(null, "Étudiant modifié avec succès");
-        afficherEtudiants();
-        viderChamps();
+            JOptionPane.showMessageDialog(null, "Étudiant modifié avec succès");
+            afficherEtudiants();
+            viderChamps();
 
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(null, "Erreur modification : " + e.getMessage());
-    }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erreur modification : " + e.getMessage());
+        }
     }//GEN-LAST:event_ButtModifActionPerformed
 
     private void ButtSupprimerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtSupprimerActionPerformed
         // TODO add your handling code here:
         if (txtmat.getText().isEmpty()) {
-        JOptionPane.showMessageDialog(null, "Sélectionnez un étudiant à supprimer");
-        return;
-    }
+            JOptionPane.showMessageDialog(null, "Sélectionnez un étudiant à supprimer");
+            return;
+        }
 
-    int confirm = JOptionPane.showConfirmDialog(
+        int confirm = JOptionPane.showConfirmDialog(
             null,
             "Voulez-vous vraiment supprimer cet étudiant ?",
             "Confirmation",
             JOptionPane.YES_NO_OPTION
-    );
+        );
 
-    if (confirm == JOptionPane.YES_OPTION) {
-        try {
-            String sql = "DELETE FROM etudiant WHERE matricule = ?";
-            pst = conn.prepareStatement(sql);
-            pst.setString(1, txtmat.getText());
+        if (confirm == JOptionPane.YES_OPTION) {
+            try {
+                String sql = "DELETE FROM etudiant WHERE matricule = ?";
+                pst = conn.prepareStatement(sql);
+                pst.setString(1, txtmat.getText());
 
-            pst.executeUpdate();
+                pst.executeUpdate();
 
-            JOptionPane.showMessageDialog(null, "Étudiant supprimé avec succès");
-            afficherEtudiants();
-            viderChamps();
+                JOptionPane.showMessageDialog(null, "Étudiant supprimé avec succès");
+                afficherEtudiants();
+                viderChamps();
 
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Erreur suppression : " + e.getMessage());
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Erreur suppression : " + e.getMessage());
+            }
         }
-    }
     }//GEN-LAST:event_ButtSupprimerActionPerformed
 
     /**
@@ -539,13 +534,12 @@ ResultSet rs = null;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField txtmat;
     private javax.swing.JTextField txtnom;

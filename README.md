@@ -1,5 +1,5 @@
 # Système de Gestion des Étudiants (L3 Informatique)
-![Texte alternatif](asset)
+![Formalaire d'acceuil](images/acceuil_github.png)
 Ce projet est une application desktop développée en **Java** permettant la gestion administrative des étudiants.
 
 ## 🚀 Technologies utilisées
